@@ -1,0 +1,137 @@
+footer {
+   width: 100%;
+   background: $gray;
+   margin-top: 100px;
+   padding: 50px 0;
+   .wrapper {
+      width: calc(100% - 40px);
+      max-width: 1213px;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      @media #{$tablet} {
+         flex-direction: column;
+         align-items: center;
+      }
+      .logo {
+         width: 253px;
+         img {
+            width: 100%;
+         }
+         span {
+            border-top: 1px solid white;
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+            display: block;
+            padding-top: 5px;
+            margin-top: 5px;
+         }
+      }
+      .nav-footer {
+         li {
+            a {
+               font-size: 12px;
+               color: white;
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+      .location {
+         @media #{$tablet} {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         &:nth-of-type(3) {
+            border-left: 1px solid white;
+            padding-left: 30px;
+            height: fit-content;
+            @media #{$tablet} {
+               border: none;
+               padding-left: unset;
+            }
+         }
+         h4 {
+            font-size: 12px;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 5px;
+         }
+         span {
+            display: block;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            &:nth-of-type(1) {
+               &::before {
+                  content: '';
+                  background: url(../img/footer-pin.svg) no-repeat center top;
+                  width: 10px;
+                  height: 12px;
+                  margin-right: 5px;
+               }
+            }
+            &:nth-of-type(2) {
+               &::before {
+                  content: '';
+                  background: url(../img/footer-phone.svg) no-repeat;
+                  width: 10px;
+                  height: 9px;
+                  margin-right: 5px;
+               }
+            }
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+               margin-left: 15px;
+               @media #{$tablet} {
+                  margin-left: 0;
+               }
+            }
+            a {
+               font-size: 12px;
+               color: white;
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+      .social {
+         display: flex;
+         align-items: center;
+         a {
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            height: fit-content;
+            &:nth-child(1) {
+               img {
+                  width: 10px;
+               }
+            }
+            &:nth-child(2) {
+               img {
+                  width: 20px;
+               }
+            }
+            &:nth-child(3) {
+               img {
+                  width: 19px;
+               }
+            }
+            &:nth-child(4) {
+               margin-right: 0;
+               img {
+                  width: 26px;
+               }
+            }
+         }
+      }
+   }
+}
